@@ -4,8 +4,8 @@ import os
 from fuzzywuzzy import fuzz
 
 client = OpenAI(
-    base_url="https://kfcfbfgr5u3vo2a8.us-east-1.aws.endpoints.huggingface.cloud/v1/",
-    api_key="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"
+    base_url="base_url",
+    api_key="api_key"
 )
 
 def guard_check(content):
@@ -42,7 +42,7 @@ def is_question_within_topic_fuzzy(question: str, allowed_topics: list):
 
 def chatbot(prompt):
     try:
-        clients = OpenAI(api_key='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')
+        clients = OpenAI(api_key='api_key')
         response = clients.chat.completions.create(
             model="gpt-4",
             messages=[{"role": "user", "content": prompt}]
